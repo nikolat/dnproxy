@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnproxy</name>
+    </assembly>
+    <members>
+        <member name="T:D.N.Proxy">
+            <summary>
+            絶対パスを元に新しいアプリケーションドメインを作成し、
+            ベースウェアからGenerator/Manager/Userクラスへデータをリモート中継します。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.REMOTE_INTERFACE">
+            <summary>
+            リモート通信用のインターフェイスクラス名です。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.GENERATOR_NAME">
+            <summary>
+            ジェネレータアセンブリファイル名です。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.GENERATOR_MAINCLASS">
+            <summary>
+            ジェネレータアセンブリの通信用クラス名です。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.UTILITY_NAME">
+            <summary>
+            ユーティリティアセンブリファイル名です。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.UTILITY_MAINCLASS">
+            <summary>
+            ユーティリティアセンブリの通信用クラス名です。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.domain">
+            <summary>
+            アプリケーションドメインを保持します。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.utility">
+            <summary>
+            ユーティリティインスタンスを保持します。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.instance">
+            <summary>
+            ユーザーインスタンスを保持します。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.protocol">
+            <summary>
+            ユーザアセンブリのプロトコルタイプを保持します。
+            </summary>
+        </member>
+        <member name="F:D.N.Proxy.remote">
+            <summary>
+            リモートメソッド情報構造体を保持します。
+            </summary>
+        </member>
+        <member name="M:D.N.Proxy.configSettingsElement(System.Xml.XmlDocument)">
+            <summary>
+            設定ファイルのアプリケーション設定にアクセスするXMLパスを返します。
+            </summary>
+            <param name="doc">設定ファイルのXMLドキュメント。</param>
+            <returns>設定ファイルのアプリケーション設定にアクセスするパス。</returns>
+        </member>
+        <member name="M:D.N.Proxy.getAssemblyData(System.Xml.XmlElement,System.String)">
+            <summary>
+            設定ファイルのアプリケーション設定を取得します。
+            </summary>
+            <param name="element">アプリケーション設定のXMLエレメント。</param>
+            <param name="key">取得したい設定名。</param>
+            <returns><c>key</c>で示される設定値。見つからない場合には、null。</returns>
+        </member>
+        <member name="M:D.N.Proxy.initialize">
+            <summary>
+            初期化時に必要な処理を行います。
+            </summary>
+            <remarks>
+            アプリケーション構成ファイルから必要な情報を取得、
+            伺かインターフェイスを読み込みインターフェイスの取得、
+            新たなアプリケーションドメインを作成、そのアプリケーションドメインで
+            dngenとdnutilの実行し、ユーザーインスタンスを作成します。
+            </remarks>
+            <returns>処理の成功時には、true。</returns>
+        </member>
+        <member name="M:D.N.Proxy.finalize">
+            <summary>
+            終了時に必要な処理を行います。
+            </summary>
+            <remarks>
+            ユーティリティのアンロード、作成したアプリケーションドメインと関連するオブジェクト解放します。
+            </remarks>
+            <returns>処理の成功時には、true。</returns>
+        </member>
+        <member name="M:D.N.Proxy.logsend(System.Int32)">
+            <summary>
+            チェックツールからの呼びだし専用です。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            チェックツールは<a href="http://umeici.hp.infoseek.co.jp/">再配布、自作ソフトへの同梱自由</a>からダウンロードできます。
+            </remarks>
+            <param name="hWnd">チェックツールのウィンドウハンドル。</param>
+            <returns>処理成功時には、true。</returns>
+        </member>
+        <member name="M:D.N.Proxy.getversion(System.Int32@)">
+            <summary>
+            プロトコルの種類とバージョンの確認要求時に呼ばれます。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>PLUGIN/1.0, HEADLINE/1.1, SCHEDULE/1.0, SCHEDULE/2.0</para>
+            </remarks>
+            <param name="len">プロトコル文字列の長さ。</param>
+            <returns>プロトコル文字列を格納したメモリへのポインタ。</returns>
+        </member>
+        <member name="M:D.N.Proxy.load(System.IntPtr,System.Int32)">
+            <summary>
+            ロード時に呼ばれます。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>全てのアセンブリ</para>
+            </remarks>
+            <param name="h">パス文字列を格納したメモリへのポインタ。</param>
+            <param name="len">パス文字列の長さ。</param>
+            <returns>処理の成功時には、true。</returns>
+        </member>
+        <member name="M:D.N.Proxy.unload">
+            <summary>
+            アンロード時に呼ばれます。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>全てのアセンブリ</para>
+            </remarks>
+            <returns>処理の成功時には、true。</returns>
+        </member>
+        <member name="M:D.N.Proxy.request(System.IntPtr,System.Int32@)">
+            <summary>
+            リクエストがきた時に呼ばれます。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>SHIORI/2.X, SHIORI/3.0, MAKOTO/2.0, SAORI/1.0, PLUGIN/2.0, SCHEDULE/2.0</para>
+            </remarks>
+            <param name="h">リクエスト文字列を格納したメモリへのポインタ。</param>
+            <param name="len">リクエスト文字列の長さ。</param>
+            <returns>レスポンス文字列を格納したメモリへのポインタ。</returns>
+        </member>
+        <member name="M:D.N.Proxy.notify(System.IntPtr,System.Int32@)">
+            <summary>
+            本体からイベントが通知されます。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>PLUGIN/1.0</para>
+            </remarks>
+            <param name="h">リクエスト文字列を格納したメモリへのポインタ。</param>
+            <param name="len">リクエスト文字列の長さ。参照渡しされている理由は不明。</param>
+        </member>
+        <member name="M:D.N.Proxy.configure(System.IntPtr)">
+            <summary>
+            ポップアップメニュー上からプラグインが選択された時の処理を行います。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>PLUGIN/1.0</para>
+            </remarks>
+            <param name="hWnd">未文書化。恐らく本体のウィンドウハンドル。</param>
+        </member>
+        <member name="M:D.N.Proxy.execute(System.IntPtr,System.Int32@)">
+            <summary>
+            ダウンロードしたヘッドラインを解析して結果を返します。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>HEADLINE/1.1</para>
+            </remarks>
+            <param name="h">ダウンロードされたファイルのパス文字列を格納したメモリへのポインタ。</param>
+            <param name="len">パス文字列の長さ。</param>
+            <returns>CR+LF を改行コードとする表示させたい文字列を格納したメモリへのポインタ。</returns>
+        </member>
+        <member name="M:D.N.Proxy.geturl(System.Int32@,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            スケジュールをセンスするためのURLを返します。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>SCHEDULE/1.0</para>
+            </remarks>
+            <param name="len">スケジュール用URLの長さを代入する。</param>
+            <param name="year">未文書化。恐らく現在年。</param>
+            <param name="month">未文書化。恐らく現在月。</param>
+            <param name="day">未文書化。恐らく現在日。</param>
+            <returns>
+            <para>year,month,dayに相当するスケジュール用URLを格納したメモリへのポインタ。</para>
+            </returns>
+        </member>
+        <member name="M:D.N.Proxy.getschedule(System.IntPtr,System.Int32@)">
+            <summary>
+            スケジュールを解析して返します。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>SCHEDULE/1.0</para>
+            </remarks>
+            <param name="h">指定されたURLから取得したHTMLファイルへの絶対パスを格納したメモリへのポインタ。</param>
+            <param name="len">パス文字列の長さ。解析後の文字列の長さを代入する。</param>
+            <returns>解析後の文字列を格納したメモリへのポインタ。</returns>
+        </member>
+        <member name="M:D.N.Proxy.geturlpost(System.IntPtr,System.Int32@,System.Int32@)">
+            <summary>
+            スケジュール投稿のためのURLとパラメタを返します。
+            このメソッドはエクスポートされます。
+            </summary>
+            <remarks>
+            <para>SCHEDULE/1.0</para>
+            </remarks>
+            <param name="h">getscheduleで説明した形式でスケジュールデータ文字列を格納したメモリへのポインタ。</param>
+            <param name="len">スケジュールデータ文字列の長さ。スケジュール投稿用URL文字列の長さを代入する。</param>
+            <param name="method">メソッド示す値を代入する。0でGET、1でPOST。</param>
+            <returns>スケジュール投稿用URL文字列を格納したメモリへのポインタ。</returns>
+        </member>
+        <member name="T:D.N.Proxy.RemoteMethods">
+            <summary>
+            リモートメソッド情報構造体
+            </summary>
+        </member>
+    </members>
+</doc>

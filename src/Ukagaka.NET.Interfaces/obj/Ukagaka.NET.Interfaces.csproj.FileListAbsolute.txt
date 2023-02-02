@@ -1,0 +1,12 @@
+H:\workspace\__dnproxy\Ukagaka.NET.Interfaces\bin\Release\Ukagaka.NET.Interfaces.dll
+H:\workspace\__dnproxy\Ukagaka.NET.Interfaces\bin\Release\Ukagaka.NET.Interfaces.pdb
+H:\workspace\__dnproxy\Ukagaka.NET.Interfaces\obj\Release\ResolveAssemblyReference.cache
+H:\workspace\__dnproxy\Ukagaka.NET.Interfaces\obj\Release\Ukagaka.NET.Interfaces.dll
+H:\workspace\__dnproxy\Ukagaka.NET.Interfaces\obj\Release\Ukagaka.NET.Interfaces.pdb
+H:\workspace\__dnproxy\dnproxy\bin\Release\Ukagaka.NET.Interfaces.dll
+H:\workspace\__dnproxy\dnproxy\bin\Release\Ukagaka.NET.Interfaces.pdb
+H:\workspace\dnproxy_sepif\dnproxy\bin\Release\Ukagaka.NET.Interfaces.dll
+H:\workspace\dnproxy_sepif\dnproxy\bin\Release\Ukagaka.NET.Interfaces.pdb
+H:\workspace\dnproxy_sepif\Ukagaka.NET.Interfaces\obj\Release\ResolveAssemblyReference.cache
+H:\workspace\dnproxy_sepif\Ukagaka.NET.Interfaces\obj\Release\Ukagaka.NET.Interfaces.dll
+H:\workspace\dnproxy_sepif\Ukagaka.NET.Interfaces\obj\Release\Ukagaka.NET.Interfaces.pdb

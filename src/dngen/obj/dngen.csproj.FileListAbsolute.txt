@@ -1,0 +1,6 @@
+H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dngen.dll
+H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dngen.pdb
+H:\workspace\dnproxy_sepif\dngen\obj\Release\ResolveAssemblyReference.cache
+H:\workspace\dnproxy_sepif\dngen\obj\Release\dngen.dll
+H:\workspace\dnproxy_sepif\dngen\obj\Release\dngen.pdb
+H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dngen.xml

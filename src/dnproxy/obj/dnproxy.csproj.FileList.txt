@@ -1,0 +1,5 @@
+bin\Release\dnproxy.dll
+bin\Release\dnproxy.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\dnproxy.dll
+obj\Release\dnproxy.pdb

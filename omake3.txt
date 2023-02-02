@@ -1,0 +1,36 @@
+おまけの遊び方。
+.NETに興味のあるゴースト開発者向けです。
+
+１．
+Ukagaka.NET.Interfaces.dllをベースウェアのある
+フォルダ（例えばssp.exe）に入れてください。
+dnproxy.dll 1.1.0以降では、これがないとdnproxyを使ったゴーストを起動できません。
+
+２．
+dnproxy.narをSSP等にインストールします。まだ呼び出しません。
+１と２の順序は逆でも大丈夫です。
+
+３．
+dnproxyのゴーストフォルダ、ghost\dnproxy\ghost\masterに移動し、
+descript.txtを開き、shioriエントリをshiori,dnproxy_debug.dllに書き換えて保存します。
+
+４．
+ベースウェアでD.N.Proxy/Sampleを呼び出します。
+
+５．
+先ほどのゴーストフォルダにあるShiori.csをエディタなどで開いてください。
+41行目にpublic bool load(IntPtr h, int len)というメソッドがあると思うので、
+そのメソッドの内部、デフォルトでは43行目に
+MessageBox.Show("Hello, dynamic world!");
+を追加して保存します。
+
+６．
+以上です。C#がわかる人は好きに遊んでください。
+玉と組み合わせて使うと有効かもしれません。
+
+
+※dnproxy_debug.dllはおまけとして存在するだけですのでゴーストの起動に必須ではありません。
+栞にdnproxy.dllを使う場合は、dnproxy_debug.dllをゴーストに同梱する必要はありません。
+
+またdnproxy_debug.dllを使用したままネットワーク更新をすると
+凄いことになる場合がありますので気をつけてください。

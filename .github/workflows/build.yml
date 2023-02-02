@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Build app for release
+        run: |
+          msbuild src\dnutil\dnutil.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\rpinvoke\rpinvoke.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\Ukagaka.NET.Interfaces\Ukagaka.NET.Interfaces.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\dngen\dngen.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\dnproxy\dnproxy.csproj -t:rebuild -property:Configuration=Release
+
+      - name: Prepare for Upload
+        run: |
+          mkdir artifacts
+          copy src\dnproxy\bin\Release\*.dll artifacts
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: dnproxy
+          path: artifacts

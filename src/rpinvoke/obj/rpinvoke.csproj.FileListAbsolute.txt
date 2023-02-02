@@ -1,0 +1,12 @@
+H:\workspace\dnproxy\rpinvoke\bin\Release\rpinvoke.exe.config
+H:\workspace\dnproxy\rpinvoke\bin\Release\rpinvoke.exe
+H:\workspace\dnproxy\rpinvoke\bin\Release\rpinvoke.pdb
+H:\workspace\dnproxy\rpinvoke\obj\Release\ResolveAssemblyReference.cache
+H:\workspace\dnproxy\rpinvoke\obj\Release\rpinvoke.exe
+H:\workspace\dnproxy\rpinvoke\obj\Release\rpinvoke.pdb
+H:\workspace\dnproxy_sepif\rpinvoke\bin\Release\rpinvoke.exe.config
+H:\workspace\dnproxy_sepif\rpinvoke\bin\Release\rpinvoke.exe
+H:\workspace\dnproxy_sepif\rpinvoke\bin\Release\rpinvoke.pdb
+H:\workspace\dnproxy_sepif\rpinvoke\obj\Release\ResolveAssemblyReference.cache
+H:\workspace\dnproxy_sepif\rpinvoke\obj\Release\rpinvoke.exe
+H:\workspace\dnproxy_sepif\rpinvoke\obj\Release\rpinvoke.pdb

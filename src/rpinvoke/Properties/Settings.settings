@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="rpinvoke.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Target" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dnproxy.dll</Value>
+    </Setting>
+    <Setting Name="ExportClass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D.N.Proxy</Value>
+    </Setting>
+    <Setting Name="CSC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Windows\Microsoft.NET\Framework\v2.0.50727\csc.exe</Value>
+    </Setting>
+    <Setting Name="ILDASM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\ildasm.exe</Value>
+    </Setting>
+    <Setting Name="ILASM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe</Value>
+    </Setting>
+    <Setting Name="ExportMethods" Type="System.String" Scope="User">
+      <Value Profile="(Default)">load,unload,'request',getversion,notify,configure,execute,geturl,getschedule,geturlpost,logsend</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
