@@ -15,10 +15,10 @@ jobs:
 
       - name: Build app for release
         run: |
-          msbuild src\dnutil\dnutil.csproj -t:rebuild -property:Configuration=Release
-          msbuild src\rpinvoke\rpinvoke.csproj -t:rebuild -property:Configuration=Release
           msbuild src\Ukagaka.NET.Interfaces\Ukagaka.NET.Interfaces.csproj -t:rebuild -property:Configuration=Release
           msbuild src\dngen\dngen.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\dnutil\dnutil.csproj -t:rebuild -property:Configuration=Release
+          msbuild src\rpinvoke\rpinvoke.csproj -t:rebuild -property:Configuration=Release
           msbuild src\dnproxy\dnproxy.csproj -t:rebuild -property:Configuration=Release
 
       - name: Prepare for Upload
