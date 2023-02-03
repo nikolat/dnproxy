@@ -1,18 +1,20 @@
 
 
 D.N.Proxy (.NET Proxy)
-Version 2.0.0.0
+Version 2.0.0.1
 
 
 【作者】
 摂理
 
+【再配布者】
+Don
 
 【概要】
 伺かインターフェイス（後述）を持ち、同インターフェイスを持つ
 .NET言語のソースコードと本体との通信を中継するライブラリです。
 ソースコードは実行時にコンパイルされます。
-玉[http://umeici.hp.infoseek.co.jp/のtama(debugger for aya)]による
+玉[http://umeici.onjn.jp/ のtama(debugger for aya)]による
 デバッグとリアルタイム表示が可能なログ共有機能及び
 .NET言語コンパイル機能を外部からも利用できます。
 
