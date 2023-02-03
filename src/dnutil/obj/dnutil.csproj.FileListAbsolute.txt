@@ -1,6 +1,0 @@
-H:\workspace\dnproxy_sepif\dnutil\obj\Release\ResolveAssemblyReference.cache
-H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dnutil.dll
-H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dnutil.pdb
-H:\workspace\dnproxy_sepif\dnutil\obj\Release\dnutil.dll
-H:\workspace\dnproxy_sepif\dnutil\obj\Release\dnutil.pdb
-H:\workspace\dnproxy_sepif\dnproxy\bin\Release\dnutil.xml

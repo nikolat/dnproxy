@@ -1,6 +1,0 @@
-bin\Release\rpinvoke.exe.config
-bin\Release\rpinvoke.exe
-bin\Release\rpinvoke.pdb
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\rpinvoke.exe
-obj\Release\rpinvoke.pdb
